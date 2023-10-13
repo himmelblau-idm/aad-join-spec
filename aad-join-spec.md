@@ -554,14 +554,6 @@ The method can be invoked through the following URI:
   <p>The software version of the client application making the request.</p>
   </td>
  </tr>
- <tr>
-  <td>
-  <p>ocp-adrs-alt-preauth-chlg</p>
-  </td>
-  <td>
-  <p>Whether the request contains a PreAuthorizedJoinChallenge (true|false). Optional.</p>
-  </td>
- </tr>
 </tbody></table>
 
 The authorization token must be granted via a ConfidentialClientApplication
