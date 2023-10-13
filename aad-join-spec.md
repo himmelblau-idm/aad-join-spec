@@ -59,7 +59,7 @@ h5 {
 }
 </style>
 
-# Entra ID Device Registration Join Protocol
+# [MS-DRS] Device Registration Service
 
 Specifies the Device Registration Join Protocol, which establishes a device
 identity between the physical device and an Entra ID (Azure AD) tenant.
