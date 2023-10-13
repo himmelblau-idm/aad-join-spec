@@ -564,6 +564,30 @@ The method can be invoked through the following URI:
  </tr>
 </tbody></table>
 
+The authorization token must be granted via a ConfidentialClientApplication
+against the Intune Portal client.
+
+<table class="protocol-table"><thead>
+
+  <tr>
+   <th>
+   <p>Name</p>
+   </th>
+   <th>
+   <p>Description</p>
+   </th>
+  </tr>
+ </thead><tbody>
+ <tr>
+  <td>
+  <p>d4ebce55-015a-49b5-a083-c84d1797ae8c</p>
+  </td>
+  <td>
+  <p>Intune Portal Application Id.</p>
+  </td>
+ </tr>
+</tbody></table>
+
 ### Request body
 
 In the request body, supply a JSON representation of a device registration join
