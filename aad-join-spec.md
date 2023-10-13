@@ -209,9 +209,9 @@ __DeviceDisplayName__: The friendly name of the device. Required.
 __JoinType__: The type of join operation. The value SHOULD be set to 4.
 Required.
 
-__AikCertificate__: Unknown string. Optional.
+__AikCertificate__: [Attestation Identity Key Certificate](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wcce/adc2aab5-701b-4f91-9dc0-5615543712bf). Optional.
 
-__AttestationData__: Unknown string. Optional.
+__AttestationData__: An exported [TPMS_ATTEST structure](https://trustedcomputinggroup.org/wp-content/uploads/TCG_TPM2_r1p59_Part2_Structures_pub.pdf). Optional.
 
 __Attributes__: A property with the following fields:
 
