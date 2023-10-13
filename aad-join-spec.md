@@ -522,6 +522,14 @@ The method can be invoked through the following URI:
  </tr>
  <tr>
   <td>
+  <p>client-request-id</p>
+  </td>
+  <td>
+  <p>A correlation Id. Optional.</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
   <p>ocp-adrs-client-name</p>
   </td>
   <td>
@@ -534,6 +542,14 @@ The method can be invoked through the following URI:
   </td>
   <td>
   <p>The software version of the client application making the request.</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>ocp-adrs-alt-preauth-chlg</p>
+  </td>
+  <td>
+  <p>Whether the request contains a PreAuthorizedJoinChallenge (true|false). Optional.</p>
   </td>
  </tr>
 </tbody></table>
