@@ -146,7 +146,9 @@ The following HTTP methods are allowed to be performed on this resource.
 
 This method is transported by an HTTP POST.
 
-The method can be invoked through the JoinEndpoint URI discovered via the
+The method can be invoked through either the JoinEndpoint URI or the
+PrecreateEndpoint URI (if specifying a PreAuthorizedJoinChallenge) discovered
+via the
 [Device Registration Discovery Service](#device-registration-discovery-response).
 
 ##### 2.1.1.1.1 <a id="device-request-body"></a> Request Body
@@ -229,7 +231,9 @@ __Attributes__: A property with the following fields:
 
 - __SharedDevice__: This device is a shared device. Optional.
 
-__PreAuthorizedJoinChallenge__: Unknown string. Optional.
+__PreAuthorizedJoinChallenge__: A [JSON Web Token (JWT)](https://datatracker.ietf.org/doc/html/rfc7519).
+If this attribute is specified, then the join request MUST be submitted to the
+PrecreateEndpoint URI. Optional.
 
 ##### 2.1.1.1.2 <a id="device-response-body"></a> Response Body
 
