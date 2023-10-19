@@ -218,8 +218,53 @@ __OSVersion__: The operating system version installed on the device. Required.
 
 __DeviceDisplayName__: The friendly name of the device. Required.
 
-__JoinType__: The type of join operation. The value SHOULD be set to 4.
+__JoinType__: The type of join operation. The value is set as defined below.
 Required.
+
+<table class="protocol-table"><thead>
+
+  <tr>
+   <th>
+   <p>JoinType</p>
+   </th>
+   <th>
+   <p>Description</p>
+   </th>
+  </tr>
+ </thead><tbody>
+ <tr>
+  <td>
+  <p>3</p>
+  </td>
+  <td>
+  <p>Unknown.</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>4</p>
+  </td>
+  <td>
+  <p>Possibly an Azure AD join.</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>6</p>
+  </td>
+  <td>
+  <p>Possibly a federated join to on-prem AD.</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>8</p>
+  </td>
+  <td>
+  <p>Unknown.</p>
+  </td>
+ </tr>
+</tbody></table>
 
 __AikCertificate__: [Attestation Identity Key Certificate](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wcce/adc2aab5-701b-4f91-9dc0-5615543712bf). Optional.
 
