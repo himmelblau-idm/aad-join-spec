@@ -638,7 +638,7 @@ access to the Device Registration Service application resource.
 
   <tr>
    <th>
-   <p>Name</p>
+   <p>Application ID</p>
    </th>
    <th>
    <p>Description</p>
