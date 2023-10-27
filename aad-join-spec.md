@@ -234,6 +234,14 @@ Required.
  </thead><tbody>
  <tr>
   <td>
+  <p>0</p>
+  </td>
+  <td>
+  <p>Azure AD join.</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
   <p>3</p>
   </td>
   <td>
@@ -245,7 +253,7 @@ Required.
   <p>4</p>
   </td>
   <td>
-  <p>Possibly an Azure AD join.</p>
+  <p>Azure AD register.</p>
   </td>
  </tr>
  <tr>
@@ -276,6 +284,9 @@ __Attributes__: A property with the following fields:
 
 - __SharedDevice__: This device is a shared device. Optional.
 
+- __ReturnClientSid__: Whether to include the MembershipChanges field in the
+response. Optional.
+
 __PreAuthorizedJoinChallenge__: A [JSON Web Token (JWT)](https://datatracker.ietf.org/doc/html/rfc7519).
 If this attribute is specified, then the join request MUST be submitted to the
 PrecreateEndpoint URI. Optional.
@@ -295,7 +306,13 @@ response contains a JSON-formatted object, as defined below. See section
     },
     "User": {
         "Upn": string
-    }
+    },
+    "MembershipChanges": [
+        {
+            "LocalSID": string,
+            "AddSIDs": string array,
+        }
+    ]
 }
 </code></pre>
 
@@ -311,6 +328,14 @@ __User__: A property with the following fields.
 
 - __Upn__: The identifier of the identity that authenticated to the Web service,
 or the registered owner of the device.
+
+__MembershipChanges__: An array with the following fields.
+
+- __LocalSID__: The [security identifier (SID)](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dvrj/6961b602-0255-438a-8e64-1ee6081d9b88#gt_83f2020d-0804-4840-a5ac-e06439d50f8d)
+of the directory administrator account. This value MUST be ignored by the
+client.
+
+- __AddSIDs__: An array of sids. This value MUST be ignored by the client.
 
 ##### 2.1.1.1.3 <a id="device-processing-details"></a> Processing Details
 
@@ -687,10 +712,19 @@ readability.
 Content-type: application/json
 
 {
-  "Certificate": {
-    "Thumbprint": "D09A73223D16855752C5E820A70540BA6450103E",
-    "RawBody": "MIID/...rQZE="
-  },
-  "User": { "Upn": "mypc$@contoso.com" }
+    "Certificate": {
+        "Thumbprint": "D09A73223D16855752C5E820A70540BA6450103E",
+        "RawBody": "MIID/...rQZE="
+    },
+    "User": { "Upn": "myuser@contoso.com" },
+    "MembershipChanges": [
+        {
+            "LocalSID": "S-1-5-32-544",
+            "AddSIDs": [
+                "S-1-12-1-3792446273-1182712816-3605559969-2553266617",
+                "S-1-12-1-2927421837-1319477369-3754249106-3334640282"
+            ]
+        }
+    ]
 }
 </code></pre>
