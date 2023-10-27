@@ -630,8 +630,9 @@ The method can be invoked through the following URI:
  </tr>
 </tbody></table>
 
-The authorization token must be granted via a ConfidentialClientApplication
-against the Intune Portal client.
+The authorization token must be granted via a PublicClientApplication using the
+Microsoft Authentication Broker application while requesting
+access to the Device Registration Service application resource.
 
 <table class="protocol-table"><thead>
 
@@ -646,10 +647,18 @@ against the Intune Portal client.
  </thead><tbody>
  <tr>
   <td>
-  <p>d4ebce55-015a-49b5-a083-c84d1797ae8c</p>
+  <p>29d9ed98-a469-4536-ade2-f981bc1d605e</p>
   </td>
   <td>
-  <p>Intune Portal Application Id.</p>
+  <p>Microsoft Authentication Broker Application Id</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9</p>
+  </td>
+  <td>
+  <p>Device Registration Service Application Id</p>
   </td>
  </tr>
 </tbody></table>
