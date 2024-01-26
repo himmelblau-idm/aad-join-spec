@@ -276,7 +276,7 @@ Required.
   <p>6</p>
   </td>
   <td>
-  <p>Possibly a federated join to on-prem AD.</p>
+  <p>Azure AD hybrid join.</p>
   </td>
  </tr>
  <tr>
@@ -284,7 +284,7 @@ Required.
   <p>8</p>
   </td>
   <td>
-  <p>Unknown.</p>
+  <p>Azure AD join.</p>
   </td>
  </tr>
 </tbody></table>
