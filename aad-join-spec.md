@@ -191,7 +191,8 @@ request MUST use an
 [[RFC8017]](https://go.microsoft.com/fwlink/?linkid=2164409) with a 2048-bit
 key, a SHA256WithRSAEncryption signature algorithm, and a SHA256 hash algorithm.
 The Certificate request SHOULD incorporate a Nonce extension as received from a
-[Nonce Service Request](#nonce-service). Required.
+[Nonce Service Request](#nonce-service). The CN of the request MUST equal
+`7E980AD9-B86D-4306-9425-9AC066FB014A`. Required.
 
     - The OID for the Nonce extension is defined as
 "1.2.840.113556.1.5.284.2.1".
