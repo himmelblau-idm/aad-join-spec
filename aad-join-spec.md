@@ -110,7 +110,8 @@ identity between the physical device and an Entra ID (Azure AD) tenant.
   </td>
   <td>
   <p>
-
+    <span><a href="https://github.com/himmelblau-idm/aad-join-spec/releases/download/0.02/aad-join-spec.pdf" data-linktype="external">PDF</a></span>
+  | <span><a href="https://github.com/himmelblau-idm/aad-join-spec/releases/download/0.02/aad-join-spec.html" data-linktype="external">HTML</a></span>
   </p>
   </td>
  </tr>
