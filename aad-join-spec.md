@@ -98,6 +98,22 @@ identity between the physical device and an Entra ID (Azure AD) tenant.
   </p>
   </td>
  </tr>
+ <tr>
+  <td>
+  <p>01/26/2024</p>
+  </td>
+  <td>
+  <p>0.02</p>
+  </td>
+  <td>
+  <p>Minor</p>
+  </td>
+  <td>
+  <p>
+
+  </p>
+  </td>
+ </tr>
 </tbody></table>
 
 # 1 Introduction
